@@ -1,29 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UI version="4.0" >
+<ui version="4.0">
  <class>QuickFindClass</class>
- <widget class="QMainWindow" name="QuickFindClass" >
-  <property name="objectName" >
-   <string notr="true">QuickFindClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="QuickFindClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QuickFind</string>
-  </property>  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="keywordEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    padding: 6px 12px;
+    background-color: palette(base);
+    color: palette(text);
+    selection-background-color: palette(highlight);
+    selection-color: palette(highlightedtext);
+	font-size: 15px;
+}
+
+QLineEdit:focus {
+    border-color: palette(highlight);
+}
+
+QLineEdit:disabled {
+    background-color: palette(window);
+    color: palette(mid);
+    border-color: palette(mid);
+}
+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTableView" name="resultView">
+      <property name="styleSheet">
+       <string notr="true">QTableView {
+    border: 1px solid palette(mid);
+    border-radius: 8px;
+    padding: 4px;
+    background-color: palette(base);
+    color: palette(text);
+    gridline-color: palette(mid);
+}
+
+QTableView::viewport {
+    border-radius: 8px;
+    background-color: palette(base);
+}
+
+QHeaderView::section {
+    background-color: palette(button);
+    color: palette(text);
+    border: none;
+    border-right: 1px solid palette(mid);
+    border-bottom: 1px solid palette(mid);
+    padding: 4px;
+}
+
+QTableView QTableCornerButton::section {
+    background-color: palette(button);
+    border-top-left-radius: 8px;
+    border: none;
+}
+
+QTableView::item:selected {
+    background-color: palette(highlight);
+    color: palette(highlightedtext);
+}
+
+QTableView::item:hover {
+    background-color: palette(alternate-base);
+}
+
+/* 交替行色也跟随系统 */
+QTableView {
+    alternate-background-color: palette(alternate-base);
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="logLabel">
+      <property name="text">
+       <string>输入关键词……</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="QuickFind.qrc"/>
+  <include location="QuickFind.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

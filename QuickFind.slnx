@@ -2,5 +2,5 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
-  <Project Path="QuickFind/QuickFind.vcxproj" />
+  <Project Path="QuickFind/QuickFind.vcxproj" Id="eec86660-1a34-4538-9e4d-0974cbc81d7d" />
 </Solution>
