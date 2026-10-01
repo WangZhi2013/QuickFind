@@ -14,8 +14,8 @@ public:
     ~QuickFind();
 
 private slots:
-    void onKeywordChanged();   // 文本变化 → 重置计时器
-    void doSearch();           // 计时器超时 → 真正加载假数据
+    void onKeywordChanged();   // 文本变化 -> 重置计时器
+    void doSearch();           // 计时器超时 -> 真正加载假数据
 
 private:
     Ui::QuickFindClass ui;
